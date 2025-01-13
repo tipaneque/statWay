@@ -1,0 +1,34 @@
+/* Estilo geral do TextArea */
+.text-area {
+    -fx-background-color: #ecf0f1;
+    -fx-border-color: #3498db;
+    -fx-border-width: 2px;
+    -fx-text-fill: #2c3e50;
+    -fx-font-size: 14px;
+    -fx-padding: 10px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+
+/* Quando o TextArea está focado */
+.text-area:focused {
+    -fx-border-color: #2980b9;
+    -fx-background-color: #bdc3c7;
+}
+
+/* Alterar a aparência da barra de rolagem */
+.text-area .scroll-pane {
+    -fx-background-color: transparent;
+}
+
+.text-area .scroll-bar:vertical {
+    -fx-background-color: #bdc3c7;
+}
+
+
+/* Desativar o TextArea */
+.text-area:disabled {
+    -fx-background-color: #95a5a6;
+    -fx-text-fill: #7f8c8d;
+    -fx-border-color: #7f8c8d;
+}

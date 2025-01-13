@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<AnchorPane prefHeight="860.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.statway.controllers.CorrelationController">
+   <HBox prefHeight="860.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <children>
+         <VBox prefHeight="860.0" prefWidth="550.0">
+            <children>
+               <VBox prefHeight="382.0" prefWidth="550.0">
+                  <children>
+                     <Label text="1. Gráfico de correlação">
+                        <font>
+                           <Font name="System Bold" size="18.0" />
+                        </font>
+                     </Label>
+                     <VBox fx:id="chartCorrPane" prefHeight="353.0" prefWidth="550.0" />
+                  </children>
+               </VBox>
+            </children></VBox>
+         <VBox prefHeight="860.0" prefWidth="550.0">
+            <children>
+               <VBox prefHeight="75.0" prefWidth="550.0">
+                  <children>
+                     <Label text="2. Coeficiente de Correlação de Pearson">
+                        <font>
+                           <Font name="System Bold" size="18.0" />
+                        </font>
+                     </Label>
+                     <HBox alignment="TOP_RIGHT" prefHeight="40.0" prefWidth="550.0">
+                        <children>
+                           <Label fx:id="pearson" alignment="TOP_LEFT" prefHeight="28.0" prefWidth="121.0" text="0.0">
+                              <font>
+                                 <Font size="18.0" />
+                              </font>
+                           </Label>
+                        </children>
+                     </HBox>
+                  </children>
+               </VBox>
+               <VBox layoutX="10.0" layoutY="10.0" prefHeight="75.0" prefWidth="550.0">
+                  <children>
+                     <Label text="3. Coeficente de Determinação">
+                        <font>
+                           <Font name="System Bold" size="18.0" />
+                        </font>
+                     </Label>
+                     <HBox alignment="TOP_RIGHT" prefHeight="40.0" prefWidth="550.0">
+                        <children>
+                           <Label fx:id="determination" alignment="TOP_LEFT" prefHeight="28.0" prefWidth="121.0" text="0.0">
+                              <font>
+                                 <Font size="18.0" />
+                              </font>
+                           </Label>
+                        </children>
+                     </HBox>
+                  </children>
+               </VBox>
+               <VBox layoutX="10.0" layoutY="85.0" prefHeight="75.0" prefWidth="550.0">
+                  <children>
+                     <Label text="4. Coeficiente Angular (B1)">
+                        <font>
+                           <Font name="System Bold" size="18.0" />
+                        </font>
+                     </Label>
+                     <HBox alignment="TOP_RIGHT" prefHeight="40.0" prefWidth="550.0">
+                        <children>
+                           <Label fx:id="angular" alignment="TOP_LEFT" prefHeight="28.0" prefWidth="121.0" text="0.0">
+                              <font>
+                                 <Font size="18.0" />
+                              </font>
+                           </Label>
+                        </children>
+                     </HBox>
+                  </children>
+               </VBox>
+               <VBox layoutX="10.0" layoutY="160.0" prefHeight="75.0" prefWidth="550.0">
+                  <children>
+                     <Label text="5. Coeficiente Linear (Bo)">
+                        <font>
+                           <Font name="System Bold" size="18.0" />
+                        </font>
+                     </Label>
+                     <HBox alignment="TOP_RIGHT" prefHeight="40.0" prefWidth="550.0">
+                        <children>
+                           <Label fx:id="linear" alignment="TOP_LEFT" prefHeight="28.0" prefWidth="121.0" text="0.0">
+                              <font>
+                                 <Font size="18.0" />
+                              </font>
+                           </Label>
+                        </children>
+                     </HBox>
+                  </children>
+               </VBox>
+               <HBox alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="550.0">
+                  <children>
+                     <FontIcon iconColor="#4a568e" iconLiteral="fas-hand-point-right" iconSize="30" />
+                     <ImageView fitHeight="50.0" fitWidth="209.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@../images/img.png" />
+                        </image>
+                        <HBox.margin>
+                           <Insets left="10.0" />
+                        </HBox.margin>
+                     </ImageView>
+                  </children>
+               </HBox>
+            </children>
+         </VBox>
+      </children>
+   </HBox>
+</AnchorPane>

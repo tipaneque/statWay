@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="860.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.statway.controllers.DistributionController">
+   <HBox alignment="TOP_RIGHT" prefHeight="860.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <VBox prefHeight="860.0" prefWidth="550.0" style="-fx-background-color: #f2f2f2;">
+         <VBox prefHeight="362.0" prefWidth="538.0">
+            <Label text="1. Tabela de frequências">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <VBox fx:id="frequencyTablePane" prefHeight="352.0" prefWidth="538.0" stylesheets="@../css/frequency-table.css" />
+            <VBox.margin>
+               <Insets bottom="20.0" />
+            </VBox.margin>
+         </VBox>
+         <VBox alignment="BOTTOM_LEFT" prefHeight="415.0" prefWidth="538.0" VBox.vgrow="ALWAYS">
+            <Label text="2.Medidas numéricas">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <VBox prefHeight="382.0" prefWidth="538.0">
+               <HBox layoutX="10.0" layoutY="56.0" prefHeight="100.0" prefWidth="1153.0" style="-fx-border-color: #3498db; -fx-border-width: 1 0 0 0;">
+                  <HBox prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                     <Label prefHeight="45.0" text="Moda">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                     </Label>
+                  </HBox>
+                  <Label fx:id="modeValue" prefHeight="46.0" prefWidth="166.0" text="0.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </HBox>
+               <HBox prefHeight="100.0" prefWidth="1153.0" style="-fx-border-color: #3498db; -fx-border-width: 1 0 0 0;">
+                  <HBox prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                     <Label prefHeight="45.0" text="Média">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                     </Label>
+                  </HBox>
+                  <Label fx:id="meanValue" prefHeight="46.0" prefWidth="166.0" text="0.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </HBox>
+               <HBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="1153.0" style="-fx-border-color: #3498db; -fx-border-width: 1 0 0 0;">
+                  <HBox prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                     <Label prefHeight="45.0" text="Mediana">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                     </Label>
+                  </HBox>
+                  <Label fx:id="medianValue" prefHeight="46.0" prefWidth="166.0" text="0.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </HBox>
+               <HBox layoutX="10.0" layoutY="101.0" prefHeight="100.0" prefWidth="1153.0" style="-fx-border-color: #3498db; -fx-border-width: 1 0 0 0;">
+                  <HBox prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                     <Label prefHeight="45.0" text="Variância">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                     </Label>
+                  </HBox>
+                  <Label fx:id="varianceValue" prefHeight="46.0" prefWidth="166.0" text="0.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </HBox>
+               <HBox layoutX="10.0" layoutY="147.0" prefHeight="100.0" prefWidth="1153.0" style="-fx-border-color: #3498db; -fx-border-width: 1 0 0 0;">
+                  <HBox prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                     <Label prefHeight="45.0" text="Desvio Padrão">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                     </Label>
+                  </HBox>
+                  <Label fx:id="standardDeviationValue" prefHeight="46.0" prefWidth="166.0" text="0.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </HBox>
+               <HBox layoutX="10.0" layoutY="192.0" prefHeight="100.0" prefWidth="1153.0" style="-fx-border-color: #3498db; -fx-border-width: 1 0 0 0;">
+                  <HBox prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                     <Label prefHeight="45.0" text="Coeficiente de Variação">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                     </Label>
+                  </HBox>
+                  <Label fx:id="variationCoefValue" prefHeight="46.0" prefWidth="166.0" text="0.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </HBox>
+               <HBox layoutX="10.0" layoutY="238.0" prefHeight="100.0" prefWidth="1153.0" style="-fx-border-color: #3498db; -fx-border-width: 1 0 0 0;">
+                  <HBox prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                     <Label prefHeight="45.0" text="Coeficiente de Assimetria">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                     </Label>
+                  </HBox>
+                  <Label fx:id="assimteryCoefValue" prefHeight="46.0" prefWidth="166.0" text="0.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </HBox>
+               <HBox layoutX="10.0" layoutY="284.0" prefHeight="100.0" prefWidth="1153.0" style="-fx-border-color: #3498db; -fx-border-width: 1 0 0 0;">
+                  <HBox prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                     <Label prefHeight="45.0" text="Coeficiente de Curtose">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                     </Label>
+                  </HBox>
+                  <Label fx:id="curtosisCoefValue" prefHeight="46.0" prefWidth="166.0" text="0.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </HBox>
+            </VBox>
+         </VBox>
+         <HBox.margin>
+            <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+         </HBox.margin>
+      </VBox>
+      <VBox prefHeight="860.0" prefWidth="550.0" style="-fx-background-color: #f2f2f2;">
+         <VBox prefHeight="410.0" prefWidth="538.0">
+            <Label text="3. Histograma">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Pane fx:id="paneChar" prefHeight="381.0" prefWidth="538.0" />
+            <VBox.margin>
+               <Insets bottom="30.0" />
+            </VBox.margin>
+         </VBox>
+         <VBox>
+            <Label style="-fx-font-weight: bold; -fx-font-size: 18;" text="4. Classificação da distribuição">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <VBox prefHeight="57.0" prefWidth="100.0" style="-fx-border-color: #3498db; -fx-border-width: 1 0 0 0;">
+               <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                     <Label text="Assimetria" />
+                  </HBox>
+                  <Label fx:id="assimetryClassification" text="null">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </HBox>
+            </VBox>
+            <VBox layoutX="10.0" layoutY="28.0" prefHeight="53.0" prefWidth="100.0" style="-fx-border-color: #3498db; -fx-border-width: 1 0 0 0;">
+               <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                     <Label text="Curtose" />
+                  </HBox>
+                  <Label fx:id="curtosisClassification" text="null">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </HBox>
+            </VBox>
+            <VBox.margin>
+               <Insets bottom="30.0" />
+            </VBox.margin>
+         </VBox>
+         <VBox>
+
+
+
+            <VBox prefHeight="200.0" prefWidth="100.0">
+
+               <HBox prefHeight="100.0" prefWidth="200.0">
+                  <Label text="5. Medidas separatrizes">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="BOTTOM_RIGHT" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                     <Label text="Índice">
+                        <padding>
+                           <Insets right="30.0" />
+                        </padding>
+                     </Label>
+                  </HBox>
+               </HBox>
+
+               <VBox prefHeight="200.0" prefWidth="100.0">
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #3498db; -fx-border-width: 1 0 0 0;">
+                     <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                        <Label text="Quartil" />
+                     </HBox>
+                     <Label fx:id="labelQuartil" text="0" />
+                     <Spinner fx:id="spinnerQuartil" prefHeight="26.0" prefWidth="78.0">
+                        <HBox.margin>
+                           <Insets left="10.0" />
+                        </HBox.margin>
+                     </Spinner>
+                  </HBox>
+               </VBox>
+
+               <VBox layoutX="10.0" layoutY="36.0" prefHeight="200.0" prefWidth="100.0">
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #3498db; -fx-border-width: 1 0 0 0;">
+                     <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                        <Label text="Decil" />
+                     </HBox>
+                     <Label fx:id="labelDecil" text="0" />
+                     <Spinner fx:id="spinnerDecil" prefHeight="26.0" prefWidth="78.0">
+                        <HBox.margin>
+                           <Insets left="10.0" />
+                        </HBox.margin>
+                     </Spinner>
+                  </HBox>
+               </VBox>
+               <VBox layoutX="10.0" layoutY="127.0" prefHeight="200.0" prefWidth="100.0">
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #3498db; -fx-border-width: 1 0 0 0;">
+                     <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                        <Label text="Percentil" />
+                     </HBox>
+                     <Label fx:id="labelPercentil" text="0" />
+                     <Spinner fx:id="spinnerPercentil" prefHeight="26.0" prefWidth="78.0">
+                        <HBox.margin>
+                           <Insets left="10.0" />
+                        </HBox.margin>
+                     </Spinner>
+                  </HBox>
+               </VBox>
+
+            </VBox>
+
+         </VBox>
+         <HBox.margin>
+            <Insets bottom="10.0" left="5.0" right="10.0" top="10.0" />
+         </HBox.margin>
+      </VBox>
+   </HBox>
+</AnchorPane>

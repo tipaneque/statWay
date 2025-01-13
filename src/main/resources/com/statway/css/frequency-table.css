@@ -1,0 +1,10 @@
+.table-cell{
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-padding: 10;
+    -fx-font-size: 14;
+}
+
+.table-column{
+    -fx-font-size: 14;
+}
