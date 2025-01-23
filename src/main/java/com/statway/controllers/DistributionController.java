@@ -9,9 +9,7 @@ import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
 import javafx.scene.chart.BarChart;
 import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.NumberAxis;
@@ -21,7 +19,6 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -86,16 +83,12 @@ public class DistributionController implements Initializable {
     private TableView<FrequencyTableRow> frequencyTable;
 
 
-    private SpinnerValueFactory<Integer> spinnerValueFactoryQuartil;
-    private SpinnerValueFactory<Integer> spinnerValueFactoryDecil;
-    private SpinnerValueFactory<Integer> spinnerValueFactoryPercentil;
-
-
     private Distribution distribution;
 
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
         boolean isPop = DataUtils.getInstance().isPopulation();
         List<Float> data = DataUtils.getInstance().getData();
         distribution = new DistributionDataProcessor(data, isPop);
@@ -105,6 +98,7 @@ public class DistributionController implements Initializable {
     }
 
     void initCompontents(){
+
         initTable();
         initSpinner();
         initChart();
@@ -117,6 +111,7 @@ public class DistributionController implements Initializable {
     }
 
     void initTable(){
+
         frequencyTable = new TableView<>();
         TableColumn<FrequencyTableRow, String> colClasses = new TableColumn<>("Classes");
         colClasses.setCellValueFactory(new PropertyValueFactory<>("classe"));
@@ -136,6 +131,7 @@ public class DistributionController implements Initializable {
         frequencyTable.getColumns().addAll(colClasses, colMedian, colAbsoluteFreq, colRelativeFreq, colCumulativeFreq);
 
         setTable();
+
     }
 
     private void setTable(){
@@ -203,11 +199,11 @@ public class DistributionController implements Initializable {
 
     private void initSpinner(){
 
-        spinnerValueFactoryQuartil = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 3);
+        SpinnerValueFactory<Integer> spinnerValueFactoryQuartil = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 3);
         spinnerValueFactoryQuartil.setValue(1);
-        spinnerValueFactoryDecil = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 9);
+        SpinnerValueFactory<Integer> spinnerValueFactoryDecil = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 9);
         spinnerValueFactoryDecil.setValue(1);
-        spinnerValueFactoryPercentil = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 99);
+        SpinnerValueFactory<Integer> spinnerValueFactoryPercentil = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 99);
         spinnerValueFactoryPercentil.setValue(1);
 
         spinnerQuartil.setValueFactory(spinnerValueFactoryQuartil);

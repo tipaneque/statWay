@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.statway.controllers.AppBlockedController">
+   <Label layoutX="176.0" layoutY="153.0" text="Applicacao bloqueada! " textFill="#3e25cf">
+      <font>
+         <Font size="24.0"/>
+      </font>
+   </Label>
+   <Label layoutX="78.0" layoutY="214.0" text="Você já utilizou sua execução permitida.">
+      <font>
+         <Font size="24.0"/>
+      </font>
+   </Label>
+   <FontIcon iconColor="#df1111" iconLiteral="fas-lock" iconSize="60" layoutX="274.0" layoutY="127.0"/>
+   <Label fx:id="contactoLabel" layoutX="24.0" layoutY="360.0" text="Contacte o administrador" textFill="#3110d7"
+          underline="true">
+      <cursor>
+         <Cursor fx:constant="HAND"/>
+      </cursor>
+   </Label>
+</AnchorPane>

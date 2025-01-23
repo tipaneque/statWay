@@ -27,6 +27,7 @@ public class DataUtils {
     }
 
     public List<Float> getData(){
+
         if (data == null){
             System.out.println("Brow, nao tou a retornar nada");
         }else {
@@ -60,4 +61,6 @@ public class DataUtils {
     public void setPopulation(boolean population) {
         isPopulation = population;
     }
+
+
 }

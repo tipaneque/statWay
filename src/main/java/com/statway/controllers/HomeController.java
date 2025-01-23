@@ -3,7 +3,6 @@ package com.statway.controllers;
 import com.jfoenix.controls.JFXSnackbar;
 import com.statway.utils.DataUtils;
 import com.statway.utils.Validation;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;

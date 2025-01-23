@@ -19,7 +19,7 @@ public class CorrelationController implements Initializable {
     public Label angular;
     public Label linear;
     public VBox chartCorrPane;
-    ScatterChart<Number, Number> scatterChart;
+    private ScatterChart<Number, Number> scatterChart;
     private Correlation correlation;
     private List<Float> dataX;
     private List<Float> dataY;
@@ -40,8 +40,8 @@ public class CorrelationController implements Initializable {
 
         pearson.setText(correlation.getCorrelationCoefficient() + "");
         determination.setText(correlation.getDeterminationCoefficient() + "");
-        angular.setText(correlation.getBo() + "");
-        linear.setText(correlation.getB1() + "");
+        angular.setText(correlation.getB1() + "");
+        linear.setText(correlation.getBo() + "");
 
     }
 

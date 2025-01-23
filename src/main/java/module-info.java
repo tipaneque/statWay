@@ -2,13 +2,12 @@ module com.statway {
     requires javafx.controls;
     requires javafx.fxml;
 
-    requires org.controlsfx.controls;
-    requires com.dlsc.formsfx;
-    requires net.synedra.validatorfx;
     requires org.kordamp.ikonli.javafx;
+    requires org.kordamp.ikonli.fontawesome5;
     requires javafx.base;
     requires com.jfoenix;
     requires java.prefs;
+    requires java.desktop;
 
     exports com.statway.applications;
     opens com.statway.applications to javafx.fxml;
